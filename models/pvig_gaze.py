@@ -9,7 +9,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn import Sequential as Seq
 from timm.models.layers import DropPath
-from ptflops import get_model_complexity_info
 import pdb
 
 from .gcn_lib import Grapher, act_layer
@@ -194,7 +193,7 @@ def pvig_ti_224_gelu(pretrained=False, **kwargs):
     opt = OptInit(**kwargs)
     model = DeepGCN(opt)
     model.default_cfg = default_cfgs['vig_224_gelu']
-    model.load_state_dict(torch.load("../pretrain/pvig_ti_78.5.pth.tar"))
+    model.load_state_dict(torch.load("./pretrain/pvig_ti_78.5.pth.tar"))
     model.prediction[-1] = nn.Conv2d(model.prediction[-1].in_channels, 3, kernel_size=(1,1), stride=(1,1))
     m = model.prediction[-1]
     torch.nn.init.kaiming_normal_(m.weight)
@@ -230,7 +229,7 @@ def pvig_s_224_gelu(pretrained=False, **kwargs):
     opt = OptInit(**kwargs)
     model = DeepGCN(opt)
     model.default_cfg = default_cfgs['vig_224_gelu']
-    model.load_state_dict(torch.load("../pretrain/pvig_s_82.1.pth.tar"))
+    model.load_state_dict(torch.load("./pretrain/pvig_s_82.1.pth.tar"))
     model.prediction[-1] = nn.Conv2d(model.prediction[-1].in_channels, 3, kernel_size=(1,1), stride=(1,1))
     return model
 
@@ -258,7 +257,7 @@ def pvig_m_224_gelu(pretrained=False, **kwargs):
     opt = OptInit(**kwargs)
     model = DeepGCN(opt)
     model.default_cfg = default_cfgs['vig_224_gelu']
-    model.load_state_dict(torch.load("../pretrain/pvig_m_83.1.pth.tar"))
+    model.load_state_dict(torch.load("./pretrain/pvig_m_83.1.pth.tar"))
     model.prediction[-1] = nn.Conv2d(model.prediction[-1].in_channels, 3, kernel_size=(1,1), stride=(1,1))
     return model
 
@@ -284,7 +283,7 @@ def pvig_b_224_gelu(pretrained=False, **kwargs):
     opt = OptInit(**kwargs)
     model = DeepGCN(opt)
     model.default_cfg = default_cfgs['vig_b_224_gelu']
-    model.load_state_dict(torch.load("../pretrain/pvig_b_83.66.pth.tar"))
+    model.load_state_dict(torch.load("./pretrain/pvig_b_83.66.pth.tar"))
     model.prediction[-1] = nn.Conv2d(model.prediction[-1].in_channels, 3, kernel_size=(1,1), stride=(1,1))
     return model
 
