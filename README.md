@@ -4,7 +4,7 @@ Bin Wang, Hongyi Pan, Armstrong Aboah, Zheyuan Zhang, Ahmet Cetin, Drew Torigian
 
 [[`Paper`](https://arxiv.org/abs/2305.18221)] [[`BibTeX`](#citing)]
 
-![framework](./assets/framework.pdf)
+![framework](./assets/framework.png)
 
 Eye tracking research is important in computer vision because it can help us understand how humans interact with the visual world. 
 Specifically for high-risk applications, such as in medical imaging, eye tracking can help us to comprehend how radiologists and other medical professionals search, analyze, and interpret images for diagnostic and clinical purposes. 
@@ -61,7 +61,7 @@ We have already processed the raw DICOM data and generate a JPG dataset called [
 ## Visualization
 Gaze map and Grad-CAM based attention maps with and without eye-gaze data are shown. Under the images, the original label of the chest X-ray is represented by the black color, while the red and green labels indicate incorrect and correct model predictions, respectively.
 
-![performance](./assets/visualize.pdf)
+![performance](./assets/visualize.png)
 
 
 ## Citing
