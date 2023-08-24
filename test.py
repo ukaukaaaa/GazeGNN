@@ -61,7 +61,7 @@ if __name__ == '__main__':
     model = pvig_ti_224_gelu()
     model.prediction[-1] = nn.Conv2d(model.prediction[-1].in_channels, 3, 1, bias=True)
     model = model.to(device)
-    model.load_state_dict(torch.load(os.path.join(save_dir, 'acc_model.pth'), map_location=torch.device("mps")))
+    model.load_state_dict(torch.load(os.path.join(save_dir, 'acc_model.pth')))
     print(model)
     print("There are", sum(p.numel() for p in model.parameters()), "parameters.")
     print("There are", sum(p.numel() for p in model.parameters() if p.requires_grad), "trainable parameters.")
