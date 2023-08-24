@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jul 12 10:35:23 2022
-
-@author: Zephyr
-"""
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 import torch

@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jul 14 11:24:45 2022
-
-@author: Zephyr
-"""
 import os
 import torch
 from tqdm import tqdm

@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Feb 16 21:22:57 2023
-
-@author: Dell
-"""
-
 from torchvision import transforms
 from torch.utils.data import DataLoader
 from torch.utils.data import Dataset
