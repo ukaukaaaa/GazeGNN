@@ -1,6 +1,6 @@
-# GazeGNN: A Gaze-Guided Graph Neural Network for 3D Object Detection
+# GazeGNN: A Gaze-Guided Graph Neural Network for Chest X-ray Classification
 
-Bin Wang, Hongyi Pan, Armstrong Aboah, Zheyuan Zhang, Ahmet Cetin, Drew Torigian, Baris Turkbey, Elizabeth Krupinski, Jayaram Udupa, Ulas Bagci
+Bin Wang, Hongyi Pan, Armstrong Aboah, Zheyuan Zhang, Elif Keles, Drew Torigian, Baris Turkbey, Elizabeth Krupinski, Jayaram Udupa, Ulas Bagci
 
 [[`Paper`](https://arxiv.org/abs/2305.18221)] [[`BibTeX`](#citing)]
 
@@ -40,7 +40,7 @@ python train.py
 ## Dataset
 In this study, we use the dataset from a public [Chest X-ray dataset](https://physionet.org/content/egd-cxr/1.0.0/) with gaze data, which contains 1083 cases from the MIMIC-CXR dataset. For each case, a gray-scaled X-ray image with the size of around $3000\times3000$, eye-gaze data, and ground-truth classification labels are provided. These cases are classified into 3 categories: Normal, Congestive Heart Failure (CHF), and Pneumonia.
 
-We have already processed the raw DICOM data and generate a JPG dataset called [MIMIC-GAZE-JPG](https://physionet.org/content/egd-cxr/1.0.0/). In this processed dataset. we divide the original dataset into train and test datasets following the official split. It also contains the fixation heatmaps generated from raw gaze data. This processed dataset is for further fair comparison and reproducibility. Please download from the link https://physionet.org/content/egd-cxr/1.0.0/.
+We have already processed the raw DICOM data and generate a JPG dataset called [MIMIC-GAZE-JPG](https://drive.google.com/file/d/1jB0jENWn8NqCB0w9YCuEKpgm0Uiu5fdv/view?usp=share_link). In this processed dataset. we divide the original dataset into train and test datasets following the official split. It also contains the fixation heatmaps generated from raw gaze data. This processed dataset is for further fair comparison and reproducibility. Please download from the link [MIMIC-GAZE-JPG](https://drive.google.com/file/d/1jB0jENWn8NqCB0w9YCuEKpgm0Uiu5fdv/view?usp=share_link).
 
 ## Results
 
